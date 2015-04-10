@@ -1,6 +1,6 @@
-CFLAGS=-Wall -g
+CFLAGS=-Wall -g -O0
 
-all: ex1 ex3 ex4 ex5
+all: ex1 ex3 ex4 ex5 ex6
 
 clean:
 	rm -rf ex? *.dSYM
