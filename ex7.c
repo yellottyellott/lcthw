@@ -19,8 +19,13 @@ int main(int argc, char *argv[]) {
     char nul_byte = '\0';
     int care_percentage = bugs * nul_byte;
     printf("Which means you should care %d%%.\n", care_percentage);
+
     printf("Printing nul_byte with %%s: %s\n", nul_byte);
     printf("Printing nul_byte with %%c: %c\n", nul_byte);
+
+    // 2^63 - 1, max signed long
+    long big_num = 9223372036854775807;  // longs on this machine are 64bit
+    printf("%d", big_num);
 
     return 0;
 }
