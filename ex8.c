@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
-    int areas[] = {10, 12, 13, 14, 20};
-    char name[] = "Zed";
     char full_name[] = {
         'Z', 'e', 'd',
         ' ', 'A', '.', ' ',
-        'S', 'h', 'a', 'w', '\0'
+        'S', 'h', 'a', 'w',
     };
+    int areas[] = {10, 12, 13, 14, 20};
+    char name[] = "Zed";
 
     // XXX: On some systems you may have to change the
     // %ld in this code to a %u since it will use unsigned ints
@@ -23,6 +23,8 @@ int main(int argc, char *argv[]) {
     printf("The size of full_name (char[]); %ld\n", sizeof(full_name));
     printf("The number of chars: %ld\n", sizeof(full_name) / sizeof(char));
     printf("name=\"%s\" and full_name=\"%s\"\n", name, full_name);
+
+    // printf("Areas[10]: %ld", areas[10]);
 
     return 0;
 }
