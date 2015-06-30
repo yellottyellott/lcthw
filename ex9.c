@@ -36,7 +36,12 @@ int main(int argc, char*argv[]) {
     printf("another each: %c %c %c %c\n", another[0], another[1], another[2], another[3]);
 
     int test[] = {};
-    printf("%d %d %d %d ", test[0], test[1], test[2], test[3]);  // Not initialized to 0
+    printf("%d %d %d %d\n", test[0], test[1], test[2], test[3]);  // Not initialized to 0
+
+    name[3] = 'a';  // Unset the null operator.
+    printf("name: %s\n", name);
+    char newname[4] = {'a', 'a', 'a', 'a'};
+    printf("newname: %s\n", newname);
 
     return 0;
 }
