@@ -43,5 +43,14 @@ int main(int argc, char*argv[]) {
     char newname[4] = {'a', 'a', 'a', 'a'};
     printf("newname: %s\n", newname);
 
+    // Chars are just numbers
+    name[3] = ' ';
+    printf("name: %d %d %d %d\n", name[0], name[1], name[2], name[3]);
+    int vals[] = {90, 101, 100, 32};
+    printf("numbers: %c %c %c %c\n", vals[0], vals[1], vals[2], vals[3]);
+
+    // Chars are 1 byte, 8 bits, 256 values.
+    printf("sizeof name: %lu\n", sizeof(name));
+    printf("sizeof name[0]: %lu\n", sizeof(name[0]));
     return 0;
 }
