@@ -12,10 +12,18 @@ int main(int argc, char *argv[]) {
 
     char *states[] = {
         "California", "Oregon",
-        "Washington", "Texas"
+        "Washington", "Texas",
+        NULL, NULL, "Louisiana"
     };
-    int num_states = 10;
-    for(i = 0; i < num_states; i++) {
+
+    // String pointers must be 8 bytes, 64 bits on my laptop.
+    printf("sizeof states: %lu\n", sizeof(states));
+    printf("sizeof states[0]: %lu\n", sizeof(states[0]));
+    printf("len states: %lu\n", sizeof(states)/sizeof(states[0]));
+
+    // How do we find the size of an array of strings?
+    int num_states = sizeof(states)/sizeof(states[0]);
+    for(i = 0; i < num_states; i++, num_states=7) {
         printf("state %d: %s\n", i, states[i]);
     }
 }
