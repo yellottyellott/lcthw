@@ -28,7 +28,7 @@ struct Person *Person_create(char *name, int age, int height, int weight) {
 void Person_destroy(struct Person *who) {
     assert(who != NULL);
 
-    // free(who->name);
+    free(who->name);
     free(who);
 }
 
@@ -69,6 +69,21 @@ int main(int argc, char *argv[]) {
 
     // Breaking it.
     // Person_destroy(NULL);
+
+    // Extra credit.
+    // Create a struct without using a pointer.
+    // Use dotted notation.
+    // When you have a pointer, you need to use the `->` (derefererce operator)
+    // to access the attributes.
+    // Since we don't have a pointer here, we can access them directly with the
+    // `.` (dot operator).
+    struct Person p;
+    p.name = "Finn";
+    p.age = 25;
+    p.height = 5 * 12 + 10;
+    p.weight = 155;
+
+    Person_print(&p);
 
     return 0;
 }
